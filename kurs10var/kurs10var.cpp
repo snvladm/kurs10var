@@ -35,8 +35,6 @@ int main() {
     setlocale(LC_ALL, "Russian");
     string fileName;
     int menu;
-    int sexChoise;
-    int compChoise;
     int i;
     student student;
     int Edit;
@@ -210,19 +208,21 @@ int main() {
                 cout << "Список студентов пуст. Возврат в главное меню...\n";
                 break;
             }
-                for (auto write = people.begin(); write != people.end(); write++)
-                {
-                        Select.push_back(*write);
-                }
-                Select.sort(compaire);
-                i = 1;
-                for (auto write = Select.begin(); write != Select.end(); write++, i++) {
-                        cout << i << ". ";
-                        write->write(cout);}
-                break; 
-}; 
+            myList Select;
+            for (auto write = people.begin(); write != people.end(); write++)
+            {
+                Select.push_back(*write);
+            }
+            Select.sort(compaire);
+            i = 1;
+            for (auto write = Select.begin(); write != Select.end(); write++, i++) {
+                cout << i << ". ";
+                write->write(cout);
+            }
+            break;
+        };
 
-    }; while (menu != 7);
+    } while (menu != 7);
     ofstream fileWrite;
     fileWrite.open(fileName, ios_base::binary);
     ostringstream inFlow;
