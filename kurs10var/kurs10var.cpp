@@ -222,7 +222,8 @@ int main() {
             break;
         };
 
-    } while (menu != 7);
+    }
+    while (menu != 7);
     ofstream fileWrite;
     fileWrite.open(fileName, ios_base::binary);
     ostringstream inFlow;

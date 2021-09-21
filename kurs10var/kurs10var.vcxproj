@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="fileReading.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="kurs10var.cpp" />
     <ClCompile Include="list.cpp" />
